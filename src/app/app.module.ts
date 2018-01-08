@@ -10,9 +10,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from './../pages/register/register';
-import { InvoicePage } from './../pages/invoice/invoice';
-import { AccountPage } from './../pages/account/account';
+import { RegisterPage } from '../pages/register/register';
+import { InvoicePage } from '../pages/invoice/invoice';
+import { AccountPage } from '../pages/account/account';
+import { InvoiceDetailsPage } from '../pages/invoice/details/invoice-details';
 
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -25,6 +26,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     RegisterPage,
     InvoicePage,
     AccountPage,
+    InvoiceDetailsPage,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     RegisterPage,
     InvoicePage,
     AccountPage,
+    InvoiceDetailsPage,
   ],
   providers: [
     StatusBar,

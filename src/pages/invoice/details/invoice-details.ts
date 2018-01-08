@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController, NavParams } from 'ionic-angular';
-import { Invoice } from '../../app/models/invoice';
-import { InvoiceDetailsPage } from './details/invoice-details';
+import { Invoice } from '../../../app/models/invoice';
 
 /**
  * Generated class for the InvoicePage page.
@@ -12,20 +11,18 @@ import { InvoiceDetailsPage } from './details/invoice-details';
 
 @Component({
   selector: 'page-invoice',
-  templateUrl: 'invoice.html',
+  templateUrl: 'invoice-details.html',
 })
-export class InvoicePage {
+export class InvoiceDetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad InvoicePage');
+    console.log('ionViewDidLoad InvoiceDetailsPage');
   }
 
-  viewInvoice() {
-    let invoiceModal = this.modalCtrl.create(InvoiceDetailsPage, { id: 100, costs: 150});
-    invoiceModal.present();
+  goBack() {
+      this.navCtrl.pop();
   }
-
 }
