@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, ModalController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the InvoicePage page.
@@ -14,11 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InvoicePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InvoicePage');
+  }
+
+  viewInvoice() {
+    let invoiceModal = this.modalCtrl.create("Test");
+    invoiceModal.present();
   }
 
 }
