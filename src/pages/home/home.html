@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color="secondary">
+      <!-- <img src="https://mentechmedia.nl/images/favicon.png" width="40px"/> -->
+
+
+    <ion-title text-center>
+      {{username}}
     </ion-title>
+    
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+ 
+<ion-content>
+  <ion-tabs color="secondary">
+    <ion-tab tabTitle="Facturen" tabIcon="document" tabBadge="4" [root]="tab1Root" color="main-color"></ion-tab>
+    <ion-tab tabTitle="Account" tabIcon="settings" [root]="tab2Root"  color="main-color"></ion-tab>
+  </ion-tabs>
 </ion-content>
